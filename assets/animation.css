@@ -1,0 +1,16 @@
+@keyframes contentrgb {
+    0%{opacity: 1;}
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+  }
+
+@keyframes displayanim {
+    from {
+      transform: translate3d(0,20px,0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0,0,0);
+      opacity: 1;
+    }
+}

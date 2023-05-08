@@ -1,0 +1,224 @@
+@import url(animation.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Noto Sans TC',sans-serif !important;
+}
+
+#main {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    place-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    /* background: linear-gradient(rgb(90, 0, 0),rgb(0, 0, 0)); */
+    background: linear-gradient(to bottom, rgb(90, 0, 0) 0px, rgba(0, 0, 0, 0.89) 350px);
+}
+
+#bar {
+    position: absolute;
+    top: 200px;
+    width: 1200px;
+    height: 100px;
+    background-color: rgb(65, 30, 30);
+    border-radius: 0px 20px 20px 20px;
+}
+
+#options {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 100px;
+    bottom: -10px;
+    left: 180px;
+}
+
+#options ul {
+    position: absolute;
+    display: flex;
+    gap: 100px;
+}
+
+#options ul li {
+    list-style: none;
+}
+
+#options ul li a {
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    transition: .2s;
+}
+
+#options ul:hover li div {
+    color: rgb(255, 255, 255);
+    text-shadow: white 0 0 15px;
+}
+
+#options ul:hover li div:not(:hover) {
+    color: white;
+    text-shadow: white 0 0 0px;
+    opacity: 0.5;
+    filter: blur(1px);
+}
+
+.bar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border-radius: 10px;
+    border: 5px solid black;
+    transition: .2;
+}
+
+.bar-box p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#options ul:hover .bar-box {
+    background-color: rgba(37, 17, 17,1);
+    box-shadow: 0 0 5px rgba(255, 0, 0,1);
+    border: 0px solid black;
+}
+
+#options ul:hover .bar-box:not(:hover) {
+    background-color: rgba(37, 17, 17,0);
+    box-shadow: 0 0 5px rgba(255, 0, 0,0);
+    border: 5px solid black;
+}
+
+.profile {
+    position: relative;
+    bottom: 65px;
+    left: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.profile img {
+    max-width: 100%;
+    max-height: 100%;
+    justify-self: center;
+    align-self: center;
+}
+
+.profile:hover {
+    bottom: 75px;
+    transform: scale(1.1);
+}
+
+#content {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    position: relative;
+    margin-top: 350px;
+    margin-bottom: 40px;
+    grid-row: 1;
+    background-color: rgba(146, 146, 146, 0.185);
+    width: 1200px;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#content::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 0, 0);
+    animation: contentrgb 5s infinite ease-in;
+}
+
+.content-box {
+    position: relative;
+    animation: displayanim 1s ease;
+}
+
+.tab-content {
+    grid-row: 1;
+    position: relative;
+    display: none;
+    color: white;
+}
+
+.tab-content.active {
+    position: relative;
+    display: block;
+}
+
+.tab-content p {
+    position: relative;
+    margin: 20px 0 20px 40px;
+}
+
+.main-text {
+    font-size: 56px;
+}
+
+.content-text {
+    position: relative;
+    font-size: 24px;
+    line-height: 0.8;
+}
+
+#mainpage .main-text {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 0.8;
+}
+
+#mainpage .content-text {
+    position: relative;
+    text-align: center;
+    
+}
+
+#information .main-text {
+    position: relative;
+    margin-bottom: 50px;
+    line-height: 0.8;
+}
+
+#game .main-text {
+    position: relative;
+    margin-bottom: 50px;
+    line-height: 0.8;
+}
+
+#link .main-text {
+    position: relative;
+    margin-bottom: 50px;
+    line-height: 0.8;
+}
+
+

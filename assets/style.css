@@ -13,20 +13,18 @@ body {
 }
 
 #main {
-    position: relative;
+    position: absolute;
     display: grid;
     grid-template-rows: auto 1fr;
     place-items: center;
-    width: 100%;
+    min-width: 100vw;
     min-height: 100vh;
-
-    /* background: linear-gradient(rgb(90, 0, 0),rgb(0, 0, 0)); */
     background: linear-gradient(to bottom, rgb(90, 0, 0) 0px, rgba(0, 0, 0, 0.89) 350px);
 }
 
 #bar {
-    position: absolute;
-    top: 200px;
+    position: relative;
+    bottom: 600px;
     width: 1200px;
     height: 100px;
     background-color: rgb(65, 30, 30);
@@ -220,5 +218,3 @@ body {
     margin-bottom: 50px;
     line-height: 0.8;
 }
-
-

@@ -21,7 +21,10 @@ tabLinks.forEach(link => {
 
     if (link.getAttribute('href') === '#game') {
       const gameContent = document.querySelector(`#game-content`);
-      gameContent.classList.add('active');
+      gameContent.classList.remove('active'); // 移除 active class
+      setTimeout(() => {
+        gameContent.classList.add('active'); // 延遲後再增加 active class
+      }, 0);
     } else {
       const gameContent = document.querySelector(`#game-content`);
       gameContent.classList.remove('active');
